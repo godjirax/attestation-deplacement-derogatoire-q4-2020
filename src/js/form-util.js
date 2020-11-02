@@ -126,7 +126,10 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
   $('#generate-btn').addEventListener('click', async (event) => {
     event.preventDefault()
 
+    console.log('??')
+
     const reasons = getReasons(reasonInputs)
+    console.log("prepareInputs -> reasons", reasons)
     if (!reasons) {
       reasonFieldset.classList.add('fieldset-error')
       reasonAlert.classList.remove('hidden')
@@ -134,10 +137,24 @@ export function prepareInputs (formInputs, reasonInputs, reasonFieldset, reasonA
       return
     }
 
+    console.log("prepareInputs -> formInputs", formInputs)
     const invalid = validateAriaFields()
+    console.log("prepareInputs -> invalid", invalid)
     if (invalid) {
       return
     }
+    
+
+    const form = document.querySelector('#form-profile')
+    const formData = new FormData(form)
+
+    const formObj = {}
+    formData.forEach(function (value, key) {
+      formObj[key] = value
+    })
+    const formJson = JSON.stringify(formObj)
+
+    window.localStorage.setItem('form', formJson)
 
     const pdfBlob = await generatePdf(getProfile(formInputs), reasons, pdfBase)
 

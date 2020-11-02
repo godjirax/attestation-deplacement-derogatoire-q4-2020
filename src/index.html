@@ -30,11 +30,7 @@
 </head>
 <body>
     <header role="banner" class="wrapper">
-        <picture>
-            <source srcset="/MIN_Interieur_RVB_dark.svg" media="(prefers-color-scheme: dark)">
-            <img src="/MIN_Interieur_RVB.svg" alt="Ministère de l'intérieur. Liberté, égalité, fraternité."
-                class="logo" role="presentation" aria-hidden="true">
-        </picture>
+        
 
         <div>
             <h1 class="flex flex-wrap">
@@ -45,10 +41,10 @@
                   Attestation de déplacement dérogatoire
                 </span>
             </h1>
-            <p class="text-desc">
+            <!-- <p class="text-desc">
                 En application du décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales 
                 nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire 
-            </p>
+            </p> -->
 
         </div>
     </header>
@@ -60,6 +56,10 @@
         ></p>
 
         <div class="wrapper">
+            <p id="show-form-btn" style="display:none"><button onclick="window.showForm()">Afficher formulaire</button>
+                
+                <span id="person" />
+            </p>
             <form id="form-profile" accept-charset="UTF-8"></form>
             <p class="text-center mt-5">
                 <button type="button" id="generate-btn" class="btn btn-primary btn-attestation"><span ><i class="fa fa-file-pdf inline-block mr-1"></i>  Générer mon attestation</span></button>
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div id="footnotes">
+        <!-- <div id="footnotes">
             <p id="footnote1">
                 [1] Les personnes souhaitant bénéficier de l'une de ces exceptions doivent se munir s'il y a lieu, lors de leurs déplacements hors de leur domicile, d'un document leur permettant de justifier que le déplacement considéré entre dans le champ de l'une de ces exceptions.
             </p>
@@ -80,7 +80,7 @@
             <p id="footnote3">
                 [3] Y compris les acquisitions à titre gratuit (distribution de denrées alimentaires...) et les déplacements liés à la perception de prestations sociales et au retrait d'espèces.
             </p>
-        </div>
+        </div> -->
         <p class="github">
             Le code source de ce service est consultable sur <a href="https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020" class="github-link">GitHub</a>.
         </p>
@@ -94,10 +94,10 @@
     </main>
     <footer role="contentinfo" class="main-footer">
         <div class="footer-links">
-            <a href="./confidentialite.html" title="Confidentialité - nouvelle page" target="_blank" class="footer-line footer-link">Confidentialité</a>
+            <!-- <a href="./confidentialite.html" title="Confidentialité - nouvelle page" target="_blank" class="footer-line footer-link">Confidentialité</a>
             <a href="https://www.interieur.gouv.fr/Infos-du-site/Mentions-legales" title="Mentions légales - nouvelle page" target="_blank" class="footer-line footer-link">Mentions légales</a>
             <a href="https://www.gouvernement.fr/info-coronavirus" title="Information du gouvernement sur le Covid-19 - nouvelle page" target="_blank" class="footer-line footer-link">Informations du gouvernement sur le Covid-19</a>
-            <div class="footer-line" >Plus d’infos au <a class="num-08" href="tel:0800130000" title="Numéro vert - appel gratuit depuis un poste fixe en France">0 800 130 000</a></div>
+            <div class="footer-line" >Plus d’infos au <a class="num-08" href="tel:0800130000" title="Numéro vert - appel gratuit depuis un poste fixe en France">0 800 130 000</a></div> -->
             <p class="footer-line" id="version"></p>
         </div>
     </footer>

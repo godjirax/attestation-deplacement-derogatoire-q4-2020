@@ -31,7 +31,7 @@ window.isUpdateAvailable = new Promise(function (resolve, reject) {
   }
 })
 
-window.isUpdateAvailable.then((isAvailable) => {
-  $('#reload-btn').addEventListener('click', () => window.location.reload())
-  $('#update-alert').classList.remove('d-none')
-})
+// window.isUpdateAvailable.then((isAvailable) => {
+//   $('#reload-btn').addEventListener('click', () => window.location.reload())
+//   $('#update-alert').classList.remove('d-none')
+// })

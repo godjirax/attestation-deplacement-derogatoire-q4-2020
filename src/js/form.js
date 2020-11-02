@@ -121,7 +121,7 @@ const createReasonFieldset = (reasonsData) => {
   const textAlert = createElement('p', textAlertAttrs)
 
   const textSubscribeReasonAttrs = {
-    innerHTML: 'certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l\'épidémie de Covid19 dans le cadre de l\'état d\'urgence sanitaire  <a class="footnote" href="#footnote1">[1]</a>&nbsp;:',
+    innerHTML: '',
   }
 
   const textSubscribeReason = createElement('p', textSubscribeReasonAttrs)
@@ -162,5 +162,5 @@ export function createForm () {
     .find(field => field.key === 'reason')
 
   const reasonFieldset = createReasonFieldset(reasonsData)
-  appendToForm([...createTitle(), ...formFirstPart, reasonFieldset])
+  appendToForm([ ...formFirstPart, reasonFieldset])
 }
